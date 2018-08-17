@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">rntemplate</string>
+    <!--Вот тут теперь переопределить можно значения урла авторизации в пасспорте-->
+    <!--<string name="auth_passport_auth_url">https://api-jkh-dev.goodline.info/ords/mobile/digitalcity/</string>-->
+</resources>

@@ -1,0 +1,48 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+def create_react_pods
+    pod 'React', :path => '../node_modules/react-native', :subspecs => [
+    'Core',
+    'CxxBridge', # Include this for RN >= 0.47
+    'DevSupport', # Include this to enable In-App Devmenu if RN >= 0.43
+    'RCTText',
+    'RCTNetwork',
+    'RCTImage',
+    'RCTAnimation',
+    'RCTVibration',
+    'RCTSettings',
+    'RCTGeolocation',
+    'RCTBlob',
+    'RCTLinkingIOS',
+    'RCTActionSheet',
+    'RCTWebSocket', # needed for debugging
+    # Add any other subspecs you want to use in your project
+    ]
+    # Explicitly include Yoga if you are using RN >= 0.42.0
+    pod "yoga", :path => "../node_modules/react-native/ReactCommon/yoga"
+    
+    # Third party deps podspec link
+    pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+    pod 'glog', :podspec => "../node_modules/react-native//third-party-podspecs/glog.podspec"
+    pod "Folly", :podspec => "../node_modules/react-native/third-party-podspecs/Folly.podspec"
+end
+
+target 'rntemplate' do
+
+  # Dependences for React
+  
+  create_react_pods
+
+  pod 'RNInappsList', :podspec => '../node_modules/inapps-list/ios/RNInappsList.podspec'
+  pod 'RNGlAuthBridge', :podspec => '../node_modules/gl-auth-bridge/ios/RNGlAuthBridge.podspec'
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+  pod 'BugsnagReactNative', path: '../node_modules/bugsnag-react-native'
+  pod 'RNGlFcmBridge', :podspec => '../node_modules/gl-fcm-bridge/ios/RNGlFcmBridge.podspec'
+  
+  pod "react-native-amplitude-analytics", path: '../node_modules/react-native-amplitude-analytics'
+  pod "react-native-appmetrica", path: '../node_modules/react-native-appmetrica'
+
+end
+
+

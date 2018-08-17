@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "rootDir": "../../",
+        "baseUrl": "../../",
+        "paths": {
+            "@/*": ["source/common/*"],
+            "~/*": ["source/scenes/*"],
+            "%/*": ["source/assets/*"]
+        }
+      }
+}
