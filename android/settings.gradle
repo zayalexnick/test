@@ -1,4 +1,6 @@
 rootProject.name = 'RNTemplate'
+include ':react-native-amplitude-analytics'
+project(':react-native-amplitude-analytics').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-amplitude-analytics/android')
 
 include ':app'
 
@@ -8,8 +10,6 @@ project(':bugsnag-react-native').projectDir = new File(rootProject.projectDir, '
 include ':react-native-appmetrica'
 project(':react-native-appmetrica').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-appmetrica/android')
 
-include ':react-native-amplitude-analytics'
-project(':react-native-amplitude-analytics').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-amplitude-analytics/android')
 
 include ':gl-auth-bridge'
 project(':gl-auth-bridge').projectDir = new File(rootProject.projectDir, '../node_modules/gl-auth-bridge/android')

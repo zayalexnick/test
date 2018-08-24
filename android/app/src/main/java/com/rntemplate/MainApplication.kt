@@ -10,6 +10,10 @@ import info.goodline.react.android.fcm.messaging.ITokenRegistrator
 import info.goodline.react.android.fcm.modules.RNGlFcmBridgePackage
 import info.goodline.react.android.innapslist.modules.InAppsListViewPackage
 import io.reactivex.Completable
+import com.bugsnag.BugsnagReactNative
+import com.doochik.RNAppMetrica.AppMetricaPackage
+import com.horcrux.svg.SvgPackage
+import com.sudoplz.reactnativeamplitudeanalytics.RNAmplitudeSDKPackage
 
 class MainApplication : RNController() {
     override val isDebugMode: Boolean

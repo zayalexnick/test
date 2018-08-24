@@ -146,7 +146,7 @@ android {
     }
     configurations.all {
         resolutionStrategy {
-            force 'com.android.support:multidex:1.0.3'
+            force 'org.webkit:android-jsc:r224109'
             force "com.google.android.gms:play-services-base:$project.firebaseVersion"
             force "com.google.android.gms:play-services-maps:$project.firebaseVersion"
             force 'com.android.support:multidex:1.0.3'
@@ -156,6 +156,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-amplitude-analytics')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile 'com.android.support:multidex:1.0.3'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.ext.kotlin_version}"
@@ -163,7 +164,6 @@ dependencies {
     compile "com.facebook.react:react-native:+"  // тянет самую последнюю версию реакта досупного в папке node_modules, версия определена в package.json
     compile project(':bugsnag-react-native')
     compile project(':react-native-appmetrica')
-    compile project(':react-native-amplitude-analytics')
     compile project(':react-native-svg')
     compile project(':inapps-list')
     compile project(':gl-auth-bridge')

@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { Provider } from 'mobx-react';
+import Auth from 'gl-auth-bridge';
+import { View, Button } from 'react-native';
+/*import { Provider } from 'mobx-react';
 import { ThemeProvider } from 'styled-components';
 
 import stores from '@/mobx/stores';
@@ -13,4 +15,12 @@ export default () => (
             <Navigation />
         </ThemeProvider>
     </Provider>
-);
+);*/
+
+
+
+export default () => (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Button onPress={() => Auth.showAccountsListView()} title="Авторизация" />
+    </View>
+)
